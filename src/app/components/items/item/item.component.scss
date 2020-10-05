@@ -1,0 +1,33 @@
+.card {
+  height: 280px;
+  width: 180px;
+  min-height: 280px;
+  min-width: 180px;
+  border-radius: 12px;
+  margin: 20px;
+
+  .btn {
+    align-items: right;
+  }
+  $img-height: 150px;
+
+  .card-img-top {
+    height: $img-height;
+    width: $img-height;
+    min-height: $img-height;
+    max-height: $img-height;
+    min-width: $img-height;
+    min-width: $img-height;
+    align-self: center;
+  }
+
+  .card-body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: rgb(232, 236, 239);
+    padding: 5px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+}

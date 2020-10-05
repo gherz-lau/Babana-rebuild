@@ -8,6 +8,8 @@ import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ItemsComponent } from './pages/items/items.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DetailsComponent } from './components/items/details/details.component';
+import { ItemFormComponent } from './components/items/item-form/item-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AppRoutingModule } from './app-routing.module';
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    ItemsComponent
+    ItemsComponent,
+    DetailsComponent,
+    ItemFormComponent
   ],
   imports: [
     BrowserModule,

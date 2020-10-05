@@ -1,0 +1,15 @@
+$img-height: 150px; //asi se declara una variable para css
+
+  .img-item {
+    height: $img-height;
+    width: $img-height;
+    min-height: $img-height;
+    max-height: $img-height;
+    min-width: $img-height;
+    min-width: $img-height;
+  }
+
+  .div-card {
+    border-radius: 12px;
+ 
+  }

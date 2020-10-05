@@ -1,12 +1,17 @@
 .list-social-icon{
     height: 20px;
+    background-color: rgb(180, 178, 214);
 }
 
-footer {
-    background-color: black;
+footer{
+    background-color: rgb(180, 178, 214);
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 40px;
     color: white;
+  }
+
+.py-8, .list-unstyled{
+    background-color: rgb(180, 178, 214);
   }

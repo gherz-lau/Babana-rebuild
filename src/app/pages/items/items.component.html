@@ -1,1 +1,20 @@
-<p>items works!</p>
+<div class="container">
+    <div class="row">
+            <div class="col-sm-12 pt-2 pb-2">
+                    <button (click)="addNewItem()" type="button" class="btn btn-primary btn-lg">Add Item</button>
+            </div>
+    </div>
+    <div class="row">
+            <div class="col-sm-6">
+                    <div class="card-deck">
+                            <app-item *ngFor="let item of miServicio.listItems" [itemObj]="item"
+                                    (autoKillEmit)="killChild($event)"></app-item>
+                    </div>
+            </div>
+            <div class="col-sm-6">
+                    <div *ngIf="miServicio.selectedItem">
+                            <app-details [itemObj]="miServicio.selectedItem"></app-details>
+                    </div>
+            </div>
+    </div>
+</div>

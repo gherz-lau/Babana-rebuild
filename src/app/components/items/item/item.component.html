@@ -1,1 +1,17 @@
-<p>item works!</p>
+<div class="card" *ngIf="!isEditing">
+    <button class="btn btn-outline-light btn-sm" title="Delete" (click)="deleteItem()">x</button>
+    <img [src]="itemObj.image" class="card-img-top img-fluid" alt="item">
+    <div class="card-body">
+        
+        <h5 class="card-title">{{itemObj.title}}</h5>
+        <!--<p class="card-text">{{itemObj.description}}</p>-->
+        <a href="javascript:;" class="btn btn-outline-secondary" (click)="viewDetails()">View</a>
+    </div>
+</div>
+<div class="card" *ngIf="isEditing">
+    <div class="card-body">
+        <app-item-form [item]="itemObj" *ngIf="isEditing" (saveResult)="savedItem($event)"
+            (cancelResult)="cancelItem($event)">
+        </app-item-form>
+    </div>
+</div>

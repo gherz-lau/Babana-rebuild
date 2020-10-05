@@ -1,0 +1,36 @@
+<div *ngIf="!isEditing">
+    <!--<div class="details-page">-->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="row">
+            <div class="col-sm-6"> 
+            
+            
+            <img [src]="itemObj.image" alt="" height="200px" width="200px">
+            
+        </div>
+        
+        <div class="col-sm-6">
+            <div class="box-details">
+                <h1 class="display-4">Details Page</h1>
+                <hr class="my-4">
+                <h2>{{itemObj.title}}</h2>
+                <p>{{itemObj.description}}</p>
+                   
+            </div>
+            
+        </div>   
+    
+            </div>
+            <div class="box-btns">
+                <button (click)="editItem()" class="btn btn-secondary btn-lg">Edit</button>
+                <button (click)="skip()" class="btn btn-secondary btn-lg">Skip</button>
+            </div>
+       <!-- </div> -->
+    
+    </div>
+    </div>
+    <app-item-form [item]="itemObj" *ngIf="isEditing" (saveResult)="savedItem($event)" (cancelResult)= "skip()" > <!--"cancelItem($event)">-->
+    
+    </app-item-form>
+            
+        
