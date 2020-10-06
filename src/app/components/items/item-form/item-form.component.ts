@@ -1,5 +1,10 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
+
+import { FormControl, FormGroup } from '@angular/forms';
+import { Validators } from '@angular/forms';
+
+
 @Component({
   selector: 'app-item-form',
   templateUrl: './item-form.component.html',
@@ -14,6 +19,21 @@ export class ItemFormComponent implements OnInit {
     '/assets/items-img/leaf.jpg',
     '/assets/items-img/turnip.jpg',
   ];
+
+  
+  itemForm = new FormGroup({
+    titleCtrl: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+    ]),
+    descriptionCtrl: new FormControl('', [
+      Validators.required,
+      Validators.maxLength(50),
+    ]),
+  });
+  
+  
+  isSubmited: boolean;
 
   form = {
     id: -1,
@@ -50,6 +70,18 @@ export class ItemFormComponent implements OnInit {
     }
 
   }
+
+
+  miSubmitFunction() {
+    this.isSubmited = true;
+    if (this.itemForm.valid) {
+      //llama al server y manda informacion
+      alert('formulario valido yahooooo!');
+    }
+  }
+
+
+
 
   startInterval() {
     this.interval = setInterval(() => {
@@ -95,10 +127,5 @@ export class ItemFormComponent implements OnInit {
         this.cancelResult.emit(this.form);
         
   } 
-
-
-
-
-
-  
+ 
 }

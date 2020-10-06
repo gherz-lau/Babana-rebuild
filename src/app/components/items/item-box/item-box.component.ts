@@ -1,12 +1,12 @@
 import { Component, OnInit, SkipSelf } from '@angular/core';
-import { ItemsService } from './../../services/items.service';
+import { ItemsService } from './../../../services/items.service';
 
 @Component({
-  selector: 'app-items',
-  templateUrl: './items.component.html',
-  styleUrls: ['./items.component.scss'],
+  selector: 'app-item-box',
+  templateUrl: './item-box.component.html',
+  styleUrls: ['./item-box.component.scss'],
 })
-export class ItemsComponent implements OnInit {
+export class ItemBoxComponent implements OnInit {
   constructor(public miServicio: ItemsService) {}
 
   ngOnInit(): void {}

@@ -1,3 +1,6 @@
+
+
+
 $img-height: 150px; //asi se declara una variable para css
 
   .img-item {
@@ -7,9 +10,19 @@ $img-height: 150px; //asi se declara una variable para css
     max-height: $img-height;
     min-width: $img-height;
     min-width: $img-height;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display:flex;
+    justify-self: center;
   }
 
   .div-card {
     border-radius: 12px;
  
+  }
+
+  .p{
+    border:1px;
+    display: flex;
+    //align-self: center;
   }
